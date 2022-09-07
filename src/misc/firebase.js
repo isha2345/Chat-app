@@ -1,4 +1,7 @@
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+// eslint-disable-next-line import/newline-after-import
+import 'firebase/compat/database';
 const config={
     apiKey: "AIzaSyD7Aw9oEnh_153Bcox170fFDjLWvUJ1Qyk",
     authDomain: "chat-web-app-765ef.firebaseapp.com",
@@ -9,3 +12,5 @@ const config={
     appId: "1:997696899996:web:790ac3dd50fba4e0bed659"
 };
 const app = firebase.initializeApp(config);  
+export const auth = app.auth();
+export const database = app.database();
